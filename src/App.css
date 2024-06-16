@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFD6FF;
+  color: #000;
+  margin: 0;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 100vw;
+  background-color: #000000;
+  color: #f4eeee;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+}
+
+header .headbuttons {
+  width: 32vw;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  padding: 2px;
+}
+
+.headbuttons button {
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Fascinate Inline', cursive;
+}
+
+.pagename{
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px
+}
+
+button {
+  background-color: #FFD6FF;
+  color: #000000;
+  border: black 1.5px solid;;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: #000000 4px 4px;
+}
+
+button:hover {
+  background-color: #f4eeee;
+}
+
+main {
+  padding: 20px;
+}
+
+#templates, #generatedContract {
+  margin-bottom: 20px;
+}
+
+.template-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.template {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  box-shadow: #000000 6px 6px;
+}
+
+.template:hover{
+  background-color: #050505;
+  color: #FFD6FF;
+  box-shadow: #faf9fa 4px 4px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode {
+  background-color: #FFD6FF;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #FFD6FF;
+}
+
+.pagename{
+  font-size: large;
+  align-items: end;
+}
+
+.wallet-details {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+.wallet-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.wallet-details p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.wallet-details p strong {
+  font-weight: bold;
+  color: #555;
+}
+
+.wallet-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+.wallet-popup-container {
+  background-color: #000000;
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #00000033;
+  max-width: 450px;
+  width: 90%;
+  text-align: left;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
+.wallet-popup-container h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #f6e7e7;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.wallet-popup-container p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.wallet-popup-container p strong {
+  font-weight: bold;
+  color: #f6f2f2;
+}
+
+.wallet-popup-container button {
+  background-color: #ffd6ff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-popup-container button:hover {
+  background-color: #f4eeee;
+}
+
+
+.xp-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.xp-button {
+  background-color: #000;
+  color: #e0e0e0;
+  box-shadow: #f4eeee 3px 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.xp-button:hover{
+  background-color: #FFD6FF;
+  color: #050505;
+  box-shadow: black 4px 4px;
+}
+
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+
+.btndploy{
+  width: 21vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+}
+
