@@ -126,7 +126,7 @@ function App() {
     const fetchGeneratedContract = async (templateName) => {
         setLoading(true); // Start loading animation
         try {
-            const response = await axios.post('http://localhost:3001/generateContract', {
+            const response = await axios.post('https://koftabackend-gslkwnuvl-abhirup-banerjees-projects.vercel.app/generateContract', {
                 templateName
             });
     
@@ -181,7 +181,7 @@ function App() {
         console.log('Submitted Custom Contract:', customContract);
         // Example: Send to backend for processing
         try {
-            const response = await axios.post('http://localhost:3001/createCustomContract', customContract);
+            const response = await axios.post('https://koftabackend-gslkwnuvl-abhirup-banerjees-projects.vercel.app/createCustomContract', customContract);
             console.log('Custom contract creation response:', response.data);
             alert('Custom contract created successfully!');
         } catch (error) {
